@@ -1,0 +1,18 @@
+.header {
+    width: 100%;
+    padding: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    color: white;
+    background-color: #303033;
+    
+    font-family: 'Nunito', sans-serif;
+    font-weight: 1000;
+}
+
+.header > * {
+    text-align: center;
+}

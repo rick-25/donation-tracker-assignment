@@ -1,0 +1,31 @@
+.creator {
+    display: flex;
+    flex-flow: column nowrap;
+    width: auto;
+    height: fit-content;
+
+    margin-bottom: 10px;
+    
+    overflow: auto;
+}
+
+.creator img {
+    width: 160px;
+    height: 120px;
+
+    border: 1px solid red;
+    border-radius: 10px;
+
+}
+
+.meta {
+    margin: 5px 0;
+}
+
+.meta .username {
+    font-size: 15px;
+}
+.meta .profession {
+    color: rgb(103, 103, 103);
+    font-size: 14px;
+}

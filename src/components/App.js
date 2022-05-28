@@ -1,15 +1,23 @@
 import React from "react";
-import Header from "./Header";
-import TodoContainer from "./TodoContainer";
-import TodoForm from "./TodoForm";
 import '../css/app.css';
+
+import Header from './Header';
+import Creator from './Creator';
 
 const App = (props) => {
     return (
         <div className="app">
-            <Header title="TODO"/>
-            <TodoContainer />
-            <TodoForm />
+            <Header brand="DUCKCART"/>
+            <div className="container">
+                <Creator/>
+                <Creator/>
+                <Creator/>
+                <Creator/>
+                <Creator/>
+                <Creator/>
+                <Creator/>
+                <Creator/>
+            </div>
         </div>
     )
 };

@@ -21,3 +21,9 @@
 
     overflow: auto;
 }
+
+.container > button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+}

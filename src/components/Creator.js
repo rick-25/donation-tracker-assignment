@@ -3,22 +3,15 @@ import React from "react";
 import '../css/creator.css'
 
 
-const Creator = (props) => {
-    const data = {
-        id: "232323",
-        userName: "Carry Minati",
-        profileUrl: "",
-        profession: "Youtuber"
-    };
-
+const Creator = ( { creator, handleClick } ) => {
     return (
-        <div className="creator" data-id={data.id}>
-            <img src="https://yt3.ggpht.com/ytc/AKedOLTYmj1X3VgQCftFxIIxGH5leO14nBVJCctR2r6m1Q=s176-c-k-c0x00ffffff-no-rj-mo" />
+        <div className="creator" data-id={creator.id} onClick={(e) => { handleClick(creator.id) }}>
+            <img src={creator.profileUrl} alt={`${creator.userName}'s image`}/>
             <div className="meta">
                 <div className="username">
-                    <b>{data.userName}</b>
+                    <b>{creator.userName}</b>
                 </div>
-                <div className="profession">{data.profession}</div>
+                <div className="profession">{creator.profession}</div>
             </div>
         </div>
     );

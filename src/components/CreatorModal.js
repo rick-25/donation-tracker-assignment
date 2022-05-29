@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch , useSelector} from "react-redux";
 
 import '../css/creatormodal.css'
 
@@ -11,11 +11,25 @@ const CreatorModal = ({ creator }) => {
     const [message, setMessage] = useState("");
 
     const dispatch = useDispatch();
+
     const hideModal = () => {
         dispatch({
             type: 'setActive',
             payload: ''
         });
+    }
+
+    const addDonation = () => {
+        dispatch({
+            type: "addTransaction",
+            payload: {
+                reciverId: creator.id,
+                name,
+                amount,
+                message
+            }
+        });
+        hideModal();
     }
 
     if (!creator) return null;
@@ -30,7 +44,7 @@ const CreatorModal = ({ creator }) => {
                     </div>
                     <div className="container">
                         <div className="message">Send your love to {creator.userName} to become a real fan</div>
-                        <form onSubmit={(e) => hideModal()}>
+                        <form onSubmit={(e) => { addDonation() }}>
                             <div className="amount input-border">
                                 <span>$</span>
                                 <input

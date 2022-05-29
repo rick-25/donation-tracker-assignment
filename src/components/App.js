@@ -5,14 +5,16 @@ import Header from './Header';
 import Creator from './Creator';
 import CreatorModal from "./CreatorModal";
 
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 
 const App = (props) => {
 
     const data = useSelector(state => state.creators);
     const activeId = useSelector(state => state.activeId);
+    const logs = useSelector(state => state.donationLogs); //donation record
 
+    console.table(logs); 
 
     return (
         <div className="app">

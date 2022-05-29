@@ -8,7 +8,7 @@ import CreatorModal from "./CreatorModal";
 import { useSelector } from "react-redux";
 
 
-const App = (props) => {
+const App = () => {
 
     const data = useSelector(state => state.creators);
     const activeId = useSelector(state => state.activeId);
@@ -18,7 +18,7 @@ const App = (props) => {
 
     return (
         <div className="app">
-            <Header brand="DUCKCART" />
+            <Header brand="Donation Tracker" />
             <div className="container">
                 {data.map(el =>
                     <Creator creator={el} key={el.id}/>

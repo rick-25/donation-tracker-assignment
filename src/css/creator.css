@@ -1,6 +1,8 @@
 .creator {
     display: flex;
     flex-flow: column nowrap;
+    
+    
     width: auto;
     height: fit-content;
 

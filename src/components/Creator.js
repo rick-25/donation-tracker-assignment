@@ -10,7 +10,6 @@ const Creator = ({ creator }) => {
     return (
         <div className="creator"
             data-id={creator.id}
-            // onClick={(e) => { handleClick(creator.id) }}
             onClick={(e) => { dispatch({ type: 'setActive', payload: creator.id }) }}
         >
             <img src={creator.profileUrl} alt={`${creator.userName}'s image`} />

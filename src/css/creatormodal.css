@@ -72,7 +72,8 @@
 .popup > .container > .message {
     padding: 10px;
 }
-.popup input, .popup textarea {
+.popup input, .popup textarea{
+    font-size: inherit;
     width: 100%;
 }
 
@@ -82,9 +83,10 @@
     padding: 10px;
 }
 .amount select {
-    font-weight: 800;
+    font-weight: 700;
     background-color: inherit;
     border: none;
+    font-size: inherit;
 }
 .amount input {
     border: none;

@@ -13,7 +13,10 @@ const CreatorModal = ({ creator, hide }) => {
         <div className="creator-modal">
             <div className="modal-frame" onClick={(e) => { hide() }}>
                 <div className="popup" onClick={(e) => e.stopPropagation()}>
-                    <div className="title">{creator.userName}</div>
+                    <div className="title">
+                        <img src={creator.profileUrl} alt={`${creator.userName}'s image`} />
+                        {creator.userName}
+                    </div>
                     <div className="container">
                         <div className="message">Send your love to {creator.userName} to become a real fan</div>
                         <form onSubmit={(e) => hide()}>

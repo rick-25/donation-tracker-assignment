@@ -18,7 +18,7 @@ const CreatorModal = ({ creator, hide }) => {
                         {creator.userName}
                     </div>
                     <div className="container">
-                        <div className="message">Send your love to {creator.userName} to become a real fan</div>
+                        <div className="message">Send your love to {creator.userName} to become a real fan</div>    
                         <form onSubmit={(e) => hide()}>
                             <div className="amount input-border">
                                 <span>$</span>

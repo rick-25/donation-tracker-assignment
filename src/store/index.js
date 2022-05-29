@@ -28,6 +28,9 @@ const tempData = {
 };
 
 const reducer = (state = tempData, action) => {
+    if(action.type == 'setActive') {
+        return {...state, activeId: action.payload};
+    }
     return state;
 }
 

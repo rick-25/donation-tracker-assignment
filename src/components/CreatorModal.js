@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch , useSelector} from "react-redux";
+import { useDispatch } from "react-redux";
 
 import '../css/creatormodal.css'
 
@@ -9,6 +9,7 @@ const CreatorModal = ({ creator }) => {
     const [amount, setAmount] = useState(5);
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
+    const [symbol, setSymbol] = useState("$");
 
     const dispatch = useDispatch();
 
@@ -23,8 +24,9 @@ const CreatorModal = ({ creator }) => {
         dispatch({
             type: "addTransaction",
             payload: {
-                reciverId: creator.id,
+                creatorId: creator.id,
                 name,
+                symbol,
                 amount,
                 message
             }
@@ -46,7 +48,11 @@ const CreatorModal = ({ creator }) => {
                         <div className="message">Send your love to {creator.userName} to become a real fan</div>
                         <form onSubmit={(e) => { addDonation() }}>
                             <div className="amount input-border">
-                                <span>$</span>
+                                <select name="currencySymbol" onChange={(e) => setSymbol(e.target.value)} value={symbol}>
+                                    <option value="$">$</option>
+                                    <option value="₹">₹</option>
+                                    <option value="€">€</option>
+                                </select>
                                 <input
                                     type="number"
                                     onChange={(e) => setAmount(e.target.value)}
@@ -59,13 +65,15 @@ const CreatorModal = ({ creator }) => {
                                 placeholder="Your name(optional)"
                                 className="input-border"
                                 onChange={(e) => setName(e.target.value)}
+                                value={name}
                             />
                             <textarea
                                 placeholder="Say something nice(optional)"
                                 className="input-border"
                                 onChange={(e) => setMessage(e.target.value)}
+                                value={message}
                             />
-                            <button type="submit">Support $ {amount}</button>
+                            <button type="submit">Support {symbol} {amount}</button>
                         </form>
                     </div>
                 </div>

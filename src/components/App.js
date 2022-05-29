@@ -1,4 +1,4 @@
-import React, { useDebugValue, useState } from "react";
+import React from "react";
 import '../css/app.css';
 
 import Header from './Header';
@@ -21,7 +21,7 @@ const App = (props) => {
             <Header brand="DUCKCART" />
             <div className="container">
                 {data.map(el =>
-                    <Creator creator={el} />
+                    <Creator creator={el} key={el.id}/>
                 )}
             </div>
             <CreatorModal creator={data.find((creator) => creator.id === activeId)} />

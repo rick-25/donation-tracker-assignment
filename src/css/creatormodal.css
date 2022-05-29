@@ -1,0 +1,115 @@
+.creator-modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-color: transparent;
+    
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.popup .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    
+    font-weight: 800;
+
+    border-bottom: 2px solid rgb(119, 119, 119);
+}
+
+.modal-frame {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: hsla(0,0%,40.8%,.6352941176470588);
+}
+
+
+@keyframes scale {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 100%;
+    }
+}
+.popup {
+    width: 320px;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    animation-name: scale;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+
+    background-color: white;
+}
+
+.popup > .container {
+    padding: 0 30px;
+    margin-bottom: 20px;
+}
+.popup > .container > .message {
+    padding: 10px;
+    font-size: 13px;
+}
+.popup input, .popup textarea {
+    width: 100%;
+}
+
+.amount {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+}
+.amount span {
+    font-weight: 800;
+}
+.amount input {
+    border: none;
+}
+.amount input:focus {outline: none;}
+
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container form > * {
+    padding: 10px;
+}
+
+
+.container form button {
+    width: 50%;
+    margin: 0 auto;
+
+    border: none;
+    border-radius: 25px;
+    
+    color: white;
+    background-color: rgb(86, 60, 255);
+
+    cursor: pointer;
+}
+
+.input-border {
+    border: 2px solid rgb(186, 186, 186);
+    border-radius: 5px;
+}
+
+.input-border:focus {
+    outline: none;
+}

@@ -8,10 +8,7 @@ import '../css/creator.css'
 const Creator = ({ creator }) => {
     const dispatch = useDispatch();
     return (
-        <div className="creator"
-            data-id={creator.id}
-            onClick={(e) => { dispatch({ type: 'setActive', payload: creator.id }) }}
-        >
+        <div className="creator">
             <img src={creator.profileUrl} alt={`${creator.userName}'s image`} />
             <div className="meta">
                 <div className="username">

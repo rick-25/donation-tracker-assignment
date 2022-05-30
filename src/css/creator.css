@@ -21,6 +21,7 @@
 .meta {
     margin: 5px 0;
     text-align: start;
+    color: black;
 }
 
 .meta .username {

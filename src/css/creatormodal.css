@@ -1,128 +1,129 @@
 .creator-modal {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    
-    background-color: transparent;
-    
-    overflow: auto;
-    border-radius: 10px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: transparent;
+
+  overflow: auto;
+  border-radius: 10px;
 }
 
 .popup .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    padding: 10px;
-    gap: 10px;
-    
-    font-weight: 800;
+  padding: 10px;
+  gap: 10px;
 
-    border-bottom: 2px solid rgb(119, 119, 119);
+  font-weight: 800;
+
+  border-bottom: 2px solid rgb(119, 119, 119);
 }
 .popup img {
-    width: 35px;
-    height: 35px;
-    font-size: 5px;
-    border: 1px solid black;
-    border-radius: 50px;
-    object-fit: cover;
+  width: 35px;
+  height: 35px;
+  font-size: 5px;
+  border: 1px solid black;
+  border-radius: 50px;
+  object-fit: cover;
 }
 
 .modal-frame {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    background-color: hsla(0,0%,40.8%,.6352941176470588);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: hsla(0, 0%, 40.8%, 0.6352941176470588);
 }
-
 
 @keyframes scale {
-    0% {
-        scale: 0;
-    }
-    100% {
-        scale: 100%;
-    }
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .popup {
-    width: 320px;
+  display: block;
+  width: 320px;
 
-    border-radius: 10px;
-    overflow: hidden;
+  border-radius: 10px;
+  overflow: hidden;
 
-    animation-name: scale;
-    animation-duration: .5s;
-    animation-iteration-count: 1;
+  animation-name: scale;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 
-    background-color: white;
+  background-color: white;
 }
 
 .popup > .container {
-    padding: 0 30px;
-    margin-bottom: 20px;
-    font-size: 14px;
+  padding: 0 30px;
+  margin-bottom: 20px;
+  font-size: 14px;
 }
 .popup > .container > .message {
-    padding: 10px;
+  padding: 10px;
 }
-.popup input, .popup textarea{
-    font-size: inherit;
-    width: 100%;
+.popup input,
+.popup textarea {
+  font-size: inherit;
+  width: 100%;
 }
 
 .amount {
-    display: flex;
-    gap: 5px;
-    padding: 10px;
+  display: flex;
+  gap: 5px;
+  padding: 10px;
 }
 .amount select {
-    font-weight: 700;
-    background-color: inherit;
-    border: none;
-    font-size: inherit;
+  font-weight: 700;
+  background-color: inherit;
+  border: none;
+  font-size: inherit;
 }
 .amount input {
-    border: none;
+  border: none;
 }
-.amount input:focus {outline: none;}
-
+.amount input:focus {
+  outline: none;
+}
 
 .container form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .container form > * {
-    padding: 10px;
+  padding: 10px;
 }
 
-
 .container form button {
-    width: 50%;
-    margin: 0 auto;
+  width: 50%;
+  margin: 0 auto;
 
-    border: none;
-    border-radius: 25px;
-    
-    color: white;
-    background-color: rgb(86, 60, 255);
+  border: none;
+  border-radius: 25px;
 
-    cursor: pointer;
+  color: white;
+  background-color: rgb(86, 60, 255);
+
+  cursor: pointer;
 }
 
 .input-border {
-    border: 2px solid rgb(186, 186, 186);
-    border-radius: 5px;
+  border: 2px solid rgb(186, 186, 186);
+  border-radius: 5px;
 }
 
 .input-border:focus {
-    outline: none;
+  outline: none;
 }
